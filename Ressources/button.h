@@ -1,5 +1,5 @@
-#ifndef _CONFIG_BITS_H_
-#define _CONFIG_BITS_H_
+#ifndef _BUTTON_H_
+#define _BUTTON_H_
 
 #define BTN_S1 PORTBbits.RB0
 
