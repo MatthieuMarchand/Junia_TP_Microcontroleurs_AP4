@@ -46,3 +46,42 @@ void set_led(int led, unsigned char value) {
             break;
     }
 }
+
+// Sélectionner input_device depuis la table TABLE 12-2 p.154
+// https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16F1717_8_9-data-sheet-40001740C.pdf
+void set_led_from_pps(int output_led, char input_device) {
+    switch (output_led) {
+        case 1:    
+            TRISDbits.TRISD0 = 0;
+            RD0PPS = input_device;
+            break;
+        case 2:
+            TRISDbits.TRISD1 = 0;
+            RD1PPS = input_device;
+            break;
+        case 3:
+            TRISDbits.TRISD2 = 0;
+            RD2PPS = input_device;
+            break;
+        case 4:
+            TRISDbits.TRISD3 = 0;
+            RD3PPS = input_device;
+            break;
+        case 5:
+            TRISBbits.TRISB0 = 0;
+            RB0PPS = input_device;
+            break;
+        case 6:
+            TRISBbits.TRISB1 = 0;
+            RB1PPS = input_device;
+            break;
+        case 7:
+            TRISBbits.TRISB2 = 0;
+            RB2PPS = input_device;
+            break;
+        case 8:
+            TRISBbits.TRISB3 = 0;
+            RB3PPS = input_device;
+            break;
+    }
+}

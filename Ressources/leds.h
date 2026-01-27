@@ -13,5 +13,6 @@
 void config_leds(void);
 void set_leds(unsigned char value);
 void set_led(int led, unsigned char);
+void led_from_pps(int output_led, char input_device);
 
 #endif
